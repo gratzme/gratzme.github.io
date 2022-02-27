@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sample form</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./assets/script.js"></script>
+  <script type="text/javascript" src="./assets/standard-emojis.js"></script>
+  <script type="text/javascript" src="./assets/animated-emojis.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <div class="w-100 px-3 mb-4">
+    <div class="d-flex justify-content-between">
+      <div>Brought to you by Eduprotocols Live!</div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="animatedEmoji" />
+        <label class="form-check-label" for="animatedEmoji">
+          Animated Emoji
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="text-center">The Random Emoji Power Paragraph</h1>
+    <div class="row mt-5">
+      <div class="col text-center">
+        <span>
+          <h4>Paragraphs = Pursuing an idea!!</h4>
+        </span>
+        <div class="timer border border-dark rounded mx-4">
+          <div class="m-3">TIMER</div>
+          <div class="flip-clock justify-content-center">
+            <div class="minutes flex-column">
+              <div>minutes</div>
+              <div class="d-flex">
+                <div class="flip minutes-first">
+                  <input type="hidden" />
+                  <div class="flip-display">
+                    <div class="flip-display-top border-bottom"></div>
+                    <div class="flip-display-bottom"></div>
+                  </div>
+                  <div class="flipper">
+                    <div class="flipper-top border-bottom"></div>
+                    <div class="flipper-bottom"></div>
+                  </div>
+                </div>
+                <div class="flip minutes-last">
+                  <input type="hidden" />
+                  <div class="flip-display">
+                    <div class="flip-display-top border-bottom"></div>
+                    <div class="flip-display-bottom"></div>
+                  </div>
+                  <div class="flipper">
+                    <div class="flipper-top border-bottom"></div>
+                    <div class="flipper-bottom"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- seconds -->
+            <div class="seconds flex-column">
+              <div>seconds</div>
+              <div class="d-flex">
+                <div class="flip seconds-first">
+                  <input type="hidden" />
+                  <div class="flip-display">
+                    <div class="flip-display-top border-bottom"></div>
+                    <div class="flip-display-bottom"></div>
+                  </div>
+                  <div class="flipper">
+                    <div class="flipper-top border-bottom"></div>
+                    <div class="flipper-bottom"></div>
+                  </div>
+                </div>
+                <div class="flip seconds-last">
+                  <input type="hidden" />
+                  <div class="flip-display">
+                    <div class="flip-display-top border-bottom"></div>
+                    <div class="flip-display-bottom"></div>
+                  </div>
+                  <div class="flipper">
+                    <div class="flipper-top border-bottom"></div>
+                    <div class="flipper-bottom"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center w-50 m-auto mt-5">
+            <div>session length</div>
+            <div class="length d-flex justify-content-between">
+              <button class="rounded-0 btn btn-dark btn-md" id="minus">-</button>
+              <input min="0" max="30" id="in-minutes" type="number" class="border-bottom border-0 w-25 text-center"
+                value="0" />
+              <input type="hidden" id="remainingTime" />
+              </span>
+              <button class="rounded-0 btn btn-dark btn-md" id="plus">+</button>
+            </div>
+          </div>
+          <div class="mt-5 mb-4 operations">
+            <button class="rounded-0 btn btn-dark btn-md" id="start-timer">
+              start
+            </button>
+            <button class="rounded-0 btn btn-dark btn-md" id="stop-timer">
+              stop
+            </button>
+            <button class="rounded-0 btn btn-dark btn-md" id="clear-timer">
+              clear
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="h-100 d-grid gap-5 col-6 mx-auto">
+          <button class="btn btn-primary generateBtn" id="mainBtn">Main Idea <i class="d-none fa fa-refresh"></i>
+          </button>
+          <button class="btn btn-warning generateBtn" id="sentence2Btn">Sentence 2 <i
+              class="d-none fa fa-refresh"></i></button>
+          <button class="btn btn-warning generateBtn" id="sentence3Btn">Sentence 3 <i
+              class="d-none fa fa-refresh"></i></button>
+          <button class="btn btn-warning generateBtn" id="sentence4Btn">Sentence 4 <i
+              class="d-none fa fa-refresh"></i></button>
+          <button class="btn btn-danger generateBtn" id="endBtn">End it! <i class="d-none fa fa-refresh"></i></button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="h-100 d-grid gap-5 col-6 mx-auto">
+          <div class="emoji mainIdea"></div>
+          <div class="emoji sentence2"></div>
+          <div class="emoji sentence3"></div>
+          <div class="emoji sentence4"></div>
+          <div class="emoji endSentence"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Email Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="form-container">
+            <p>In order for us to send you future updates, we need to ask for your email</p>
+            <form id="my-form" method="POST"
+              action="https://script.google.com/macros/s/AKfycbwsKPgcbrp41VtzBT8GGgKpiqjpYsgwAAaQ418bg4iV0TUV4ACUV7Pno5sXkpnIKuYF/exec">
+              <input required name="Email" type="email" class="form-control mb-3" id="email"
+                placeholder="E-mail address..." />
+              <button type="submit" class="btn btn-primary btnSubmit">SUBMIT</button>
+              <button class="btn btn-primary processing d-none" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Processing...
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Randomize Emojis Modal -->
+  <div class="modal fade" id="randomizeEmojis" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="randomizeEmojisLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <div class="slot-main">
+            <div class="slots">
+              <div class="slot overflow-hidden">
+                <div class="slot-inner d-flex flex-column m-auto position-relative"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
