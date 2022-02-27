@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  $("#tagline").tooltip();
+
   $("#randomizeEmojis").modal("hide");
   const ppEmailRegistered = localStorage.getItem("ppEmailRegistered");
   if (!!ppEmailRegistered) {

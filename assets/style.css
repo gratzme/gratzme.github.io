@@ -13,6 +13,10 @@
   --perspective: 200px;
 }
 
+#tagline {
+  cursor: default;
+}
+
 input {
   outline: none;
 }
